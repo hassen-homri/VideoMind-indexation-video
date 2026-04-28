@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VideoMind | AI Video Search</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;800&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="minimal-container">
+        <div class="blob blob-1"></div>
+        
+        <header class="minimal-header">
+            <div class="logo-large">
+                <i class="fas fa-brain"></i>
+                <span>VideoMind</span>
+            </div>
+            <p id="video-info" class="video-info-tag">Checking status...</p>
+        </header>
+
+        <main class="main-content">
+            <!-- Initial indexing state -->
+            <div id="init-section" class="init-section hidden">
+                <h2>Video library is not ready.</h2>
+                <p>Click below to start the AI indexing process.</p>
+                <button id="init-btn" class="btn-primary-large">
+                    <i class="fas fa-bolt"></i> Initialize Indexing
+                </button>
+                <div id="init-progress" class="hidden">
+                    <div class="spinner"></div>
+                    <p>AI is analyzing audio, text and visuals... this may take a moment.</p>
+                </div>
+            </div>
+
+            <!-- Search state -->
+            <div id="search-section" class="search-section hidden">
+                <div class="search-box-large">
+                    <i class="fas fa-search search-icon"></i>
+                    <input type="text" id="main-search" placeholder="Search anything in the video...">
+                    <button id="search-btn" class="btn-primary">Search</button>
+                </div>
+                
+                <div class="results-stats-compact hidden" id="results-stats">
+                    Found <span id="count">0</span> matches
+                </div>
+
+                <div class="results-grid" id="results-grid"></div>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
