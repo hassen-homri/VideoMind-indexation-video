@@ -1,0 +1,24 @@
+# Fichiers d'index générés
+index.json
+
+# Images extraites et vidéos
+thumbnails/
+*.mp4
+*.mkv
+*.avi
+*.mp3
+thumb*.png
+
+# Dossiers d'environnement virtuel Python
+venv/
+env/
+.env
+
+# Fichiers de cache Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Fichiers OS
+.DS_Store
+Thumbs.db
